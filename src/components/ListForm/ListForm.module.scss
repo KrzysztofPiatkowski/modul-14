@@ -1,0 +1,36 @@
+@import '../../styles/settings.scss';
+
+.listForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.formGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.formGroup label {
+  min-width: 70px;
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .listForm {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .formGroup {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .formGroup label {
+    text-align: left;
+  }
+}
