@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addList } from '../../redux/store';
 import styles from './ListForm.module.scss';
 import Button from '../Button/Button';
 import TextInput from '../TextInput/TextInput';
+import { addList } from '../../redux/listsReducer';
 
 const ListForm = () => {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ const ListForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className={styles.listForm}>
-       <div classNAme={styles.formGroup}>
+       <div className={styles.formGroup}>
         <label>Title:</label>
         <TextInput
             value={title}
