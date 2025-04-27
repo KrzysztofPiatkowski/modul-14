@@ -1,13 +1,40 @@
 @import '../../styles/settings.scss';
 
 .card {
-    position: relative;
-    background: $color-light;
-    border: 1px solid lighten($color-dark, 60%);
-    padding: $base-size;
-    margin: 0 0 $base-size 0;
-    border-radius: $radius;
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
+  position: relative;
+  background: $color-light;
+  border: 1px solid lighten($color-dark, 60%);
+  padding: $base-size;
+  margin: 0 0 $base-size 0;
+  border-radius: $radius;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: $color-dark;
+
+  max-width: 300px; /* na przykład 500px, możesz zmienić */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cardTitle {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 10px; /* aby tekst nie kleił się do przycisku */
+}
+
+.favoriteButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex; /* <-- żeby ikona była wyśrodkowana */
+  align-items: center;
+}
+
+.favoriteIcon {
+  font-size: 20px;
+  color: gold;
 }
